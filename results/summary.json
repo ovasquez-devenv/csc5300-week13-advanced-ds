@@ -1,0 +1,357 @@
+{
+  "seed": 5300,
+  "quick": false,
+  "range": {
+    "sizes": [
+      2000,
+      8000,
+      20000
+    ],
+    "segment": {
+      "build": [
+        0.4190259999177215,
+        1.6974840000330005,
+        4.248805000088396
+      ],
+      "query": [
+        5.129975000045306,
+        6.671646999848235,
+        7.347265000134939
+      ],
+      "update": [
+        2.809302000059688,
+        3.6111490001076163,
+        4.302981000137152
+      ]
+    },
+    "fenwick": {
+      "build": [
+        0.257710999903793,
+        0.9693680001419125,
+        2.430567999908817
+      ],
+      "query": [
+        1.5694399999119923,
+        1.7717960001846222,
+        1.8552399999407498
+      ],
+      "update": [
+        2.4422389999472216,
+        3.299133999917103,
+        3.3575709999240644
+      ]
+    }
+  },
+  "persistent": {
+    "n": 4000,
+    "versions": [
+      25,
+      50,
+      100,
+      200
+    ],
+    "unique_nodes": [
+      8324,
+      8647,
+      9297,
+      10593
+    ],
+    "copied_nodes": [
+      207974,
+      407949,
+      807899,
+      1607799
+    ],
+    "update_ms": [
+      0.19079100002272753,
+      0.33029700011866225,
+      0.6551399999352725,
+      1.6472530001010455
+    ],
+    "query_ms": [
+      0.9662810000463651,
+      0.8911059999263671,
+      0.8631069999864849,
+      0.9103549998599192
+    ],
+    "copy_ms": [
+      0.11749699979191064,
+      0.2189279998674465,
+      0.4165939999438706,
+      0.794021999809047
+    ],
+    "rebuild_ms": [
+      115.49365599989869,
+      199.42653799989785,
+      369.5037729999058,
+      715.5924769999729
+    ]
+  },
+  "bitvector": {
+    "sizes": [
+      20000,
+      80000,
+      200000
+    ],
+    "rank_us": [
+      0.5937770000628007,
+      0.5636915000195586,
+      0.6755764999297753
+    ],
+    "select_us": [
+      4.523270500044418,
+      5.305527000018628,
+      7.509707000053822
+    ],
+    "naive_rank_us": [
+      47.12268749926807,
+      156.37253749787305,
+      518.7146875016424
+    ],
+    "naive_select_us": [
+      442.81748749881444,
+      1636.5082250018759,
+      3342.900162499518
+    ]
+  },
+  "wavelet": {
+    "sizes": [
+      2000,
+      8000,
+      20000
+    ],
+    "bit_ratio": [
+      4.0,
+      4.0,
+      4.0
+    ],
+    "query_us": [
+      2.9782212499185334,
+      3.070871249803986,
+      3.0340412502027903
+    ],
+    "python_bytes": [
+      27661,
+      86381,
+      203809
+    ]
+  },
+  "matrix": {
+    "transpose_sizes": [
+      48,
+      96,
+      144
+    ],
+    "transpose_naive_ms": [
+      0.27050999983657675,
+      0.9850720000486035,
+      2.313137000101051
+    ],
+    "transpose_co_ms": [
+      0.38265699981820944,
+      1.4074690000143164,
+      2.872403000083068
+    ],
+    "multiply_sizes": [
+      24,
+      36,
+      48
+    ],
+    "multiply_naive_ms": [
+      2.325143999996726,
+      8.348844000011013,
+      19.07368399997722
+    ],
+    "multiply_co_ms": [
+      2.9215580000254704,
+      10.62566199993853,
+      24.297174999901472
+    ],
+    "misses": [
+      {
+        "n": 64,
+        "multiply_n": 24,
+        "line_size": 8,
+        "num_lines": 16,
+        "multiply_line_size": 8,
+        "multiply_num_lines": 8,
+        "transpose_naive": 4608,
+        "transpose_co": 1024,
+        "multiply_naive": 15624,
+        "multiply_co": 6528
+      }
+    ]
+  },
+  "layouts": {
+    "sizes": [
+      1023,
+      4095,
+      16383
+    ],
+    "veb_search": [
+      1000,
+      1200,
+      1400
+    ],
+    "heap_search": [
+      1600,
+      2000,
+      2400
+    ],
+    "veb_dfs": [
+      145,
+      578,
+      2391
+    ],
+    "heap_dfs": [
+      347,
+      1403,
+      5627
+    ]
+  },
+  "memory": [
+    {
+      "structure": "segment_tree",
+      "n": 2000,
+      "bytes": 104769,
+      "notes": "Python object size after the timed updates"
+    },
+    {
+      "structure": "fenwick_tree",
+      "n": 2000,
+      "bytes": 31755,
+      "notes": "Python object size after the timed updates"
+    },
+    {
+      "structure": "segment_tree",
+      "n": 8000,
+      "bytes": 393509,
+      "notes": "Python object size after the timed updates"
+    },
+    {
+      "structure": "fenwick_tree",
+      "n": 8000,
+      "bytes": 104919,
+      "notes": "Python object size after the timed updates"
+    },
+    {
+      "structure": "segment_tree",
+      "n": 20000,
+      "bytes": 973237,
+      "notes": "Python object size after the timed updates"
+    },
+    {
+      "structure": "fenwick_tree",
+      "n": 20000,
+      "bytes": 248203,
+      "notes": "Python object size after the timed updates"
+    },
+    {
+      "structure": "persistent_segment_tree",
+      "n": 4000,
+      "bytes": 505941,
+      "notes": "25 versions, 8324 unique nodes, 207974 nodes if each version were private"
+    },
+    {
+      "structure": "persistent_segment_tree",
+      "n": 4000,
+      "bytes": 540213,
+      "notes": "50 versions, 8647 unique nodes, 407949 nodes if each version were private"
+    },
+    {
+      "structure": "persistent_segment_tree",
+      "n": 4000,
+      "bytes": 608953,
+      "notes": "100 versions, 9297 unique nodes, 807899 nodes if each version were private"
+    },
+    {
+      "structure": "persistent_segment_tree",
+      "n": 4000,
+      "bytes": 746209,
+      "notes": "200 versions, 10593 unique nodes, 1607799 nodes if each version were private"
+    },
+    {
+      "structure": "succinct_bitvector",
+      "n": 20000,
+      "bytes": 9843,
+      "notes": "directories 5776 bytes, data words separate"
+    },
+    {
+      "structure": "succinct_bitvector",
+      "n": 80000,
+      "bytes": 34519,
+      "notes": "directories 22504 bytes, data words separate"
+    },
+    {
+      "structure": "succinct_bitvector",
+      "n": 200000,
+      "bytes": 84863,
+      "notes": "directories 55264 bytes, data words separate"
+    },
+    {
+      "structure": "dna_index",
+      "n": 2000,
+      "bytes": 27661,
+      "notes": "wavelet plus the original Python string"
+    },
+    {
+      "structure": "dna_index",
+      "n": 8000,
+      "bytes": 86381,
+      "notes": "wavelet plus the original Python string"
+    },
+    {
+      "structure": "dna_index",
+      "n": 20000,
+      "bytes": 203809,
+      "notes": "wavelet plus the original Python string"
+    },
+    {
+      "structure": "matrix_pair",
+      "n": 48,
+      "bytes": 36864,
+      "notes": "two float64 matrices, input plus transpose"
+    },
+    {
+      "structure": "matrix_pair",
+      "n": 96,
+      "bytes": 147456,
+      "notes": "two float64 matrices, input plus transpose"
+    },
+    {
+      "structure": "matrix_pair",
+      "n": 144,
+      "bytes": 331776,
+      "notes": "two float64 matrices, input plus transpose"
+    }
+  ],
+  "compression": [
+    {
+      "structure": "wavelet_tree_dna",
+      "n": 2000,
+      "raw_bits": 16000,
+      "stored_bits": 4000,
+      "bit_ratio": "4.000",
+      "python_bytes": 27661,
+      "notes": "raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors"
+    },
+    {
+      "structure": "wavelet_tree_dna",
+      "n": 8000,
+      "raw_bits": 64000,
+      "stored_bits": 16000,
+      "bit_ratio": "4.000",
+      "python_bytes": 86381,
+      "notes": "raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors"
+    },
+    {
+      "structure": "wavelet_tree_dna",
+      "n": 20000,
+      "raw_bits": 160000,
+      "stored_bits": 40000,
+      "bit_ratio": "4.000",
+      "python_bytes": 203809,
+      "notes": "raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors"
+    }
+  ]
+}

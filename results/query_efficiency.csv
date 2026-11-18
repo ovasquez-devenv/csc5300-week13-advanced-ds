@@ -1,0 +1,33 @@
+structure,operation,n,us_per_op,baseline,baseline_us_per_op,speedup,notes
+fenwick_tree,range_query,2000,1.046,segment_tree,3.420,3.269,speedup is segment time divided by Fenwick time
+fenwick_tree,range_query,8000,1.181,segment_tree,4.448,3.765,speedup is segment time divided by Fenwick time
+fenwick_tree,range_query,20000,1.237,segment_tree,4.898,3.960,speedup is segment time divided by Fenwick time
+persistent_segment_tree,versioned_update,4000,7.632,rebuilt_segment_tree,4619.746,605.341,node sharing 8324/207974 after 25 versions; list copy us/op 4.700
+persistent_segment_tree,versioned_update,4000,6.606,rebuilt_segment_tree,3988.531,603.779,node sharing 8647/407949 after 50 versions; list copy us/op 4.379
+persistent_segment_tree,versioned_update,4000,6.551,rebuilt_segment_tree,3695.038,564.007,node sharing 9297/807899 after 100 versions; list copy us/op 4.166
+persistent_segment_tree,versioned_update,4000,8.236,rebuilt_segment_tree,3577.962,434.416,node sharing 10593/1607799 after 200 versions; list copy us/op 3.970
+succinct_bitvector,rank1,20000,0.594,linear_scan,47.123,79.361,select1 4.523 us vs scan 442.817 us
+succinct_bitvector,rank1,80000,0.564,linear_scan,156.373,277.408,select1 5.306 us vs scan 1636.508 us
+succinct_bitvector,rank1,200000,0.676,linear_scan,518.715,767.810,select1 7.510 us vs scan 3342.900 us
+wavelet_tree,range_count,2000,2.978,str.count,1.536,0.516,bit compression ratio 4.000 (ASCII bits / wavelet bits)
+wavelet_tree,range_count,8000,3.071,str.count,5.916,1.926,bit compression ratio 4.000 (ASCII bits / wavelet bits)
+wavelet_tree,range_count,20000,3.034,str.count,13.570,4.473,bit compression ratio 4.000 (ASCII bits / wavelet bits)
+multiply_cache_oblivious,multiply,24,2921.558,multiply_naive,2325.144,0.796,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
+multiply_cache_oblivious,multiply,36,10625.662,multiply_naive,8348.844,0.786,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
+multiply_cache_oblivious,multiply,48,24297.175,multiply_naive,19073.684,0.785,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
+transpose_naive,simulated_cache_misses,64,4608,see notes,,,us_per_op column holds miss count; transpose line 8 x 16 lines; multiply line 8 x 8 lines
+transpose_co,simulated_cache_misses,64,1024,see notes,,,us_per_op column holds miss count; transpose line 8 x 16 lines; multiply line 8 x 8 lines
+multiply_naive,simulated_cache_misses,24,15624,see notes,,,us_per_op column holds miss count; transpose line 8 x 16 lines; multiply line 8 x 8 lines
+multiply_co,simulated_cache_misses,24,6528,see notes,,,us_per_op column holds miss count; transpose line 8 x 16 lines; multiply line 8 x 8 lines
+veb,veb_search_misses,1023,1000,array_heap,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2000 dfs 1023"
+array_heap,heap_search_misses,1023,1600,veb,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2000 dfs 1023"
+veb,veb_dfs_misses,1023,145,array_heap,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2000 dfs 1023"
+array_heap,heap_dfs_misses,1023,347,veb,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2000 dfs 1023"
+veb,veb_search_misses,4095,1200,array_heap,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2400 dfs 4095"
+array_heap,heap_search_misses,4095,2000,veb,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2400 dfs 4095"
+veb,veb_dfs_misses,4095,578,array_heap,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2400 dfs 4095"
+array_heap,heap_dfs_misses,4095,1403,veb,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2400 dfs 4095"
+veb,veb_search_misses,16383,1400,array_heap,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2800 dfs 16383"
+array_heap,heap_search_misses,16383,2400,veb,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2800 dfs 16383"
+veb,veb_dfs_misses,16383,2391,array_heap,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2800 dfs 16383"
+array_heap,heap_dfs_misses,16383,5627,veb,,,"misses, not microseconds; 200 searches, line 8, 4 lines; accesses search 2800 dfs 16383"
