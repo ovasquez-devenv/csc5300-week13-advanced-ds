@@ -1,55 +1,55 @@
 structure,operation,n,seconds,ops,notes
-segment_tree,build,2000,0.000419,1,milliseconds also stored in the range query plot
-segment_tree,range_query,2000,0.005130,1500,milliseconds also stored in the range query plot
-segment_tree,point_update,2000,0.002809,1500,milliseconds also stored in the range query plot
-fenwick_tree,build,2000,0.000258,1,milliseconds also stored in the range query plot
-fenwick_tree,range_query,2000,0.001569,1500,milliseconds also stored in the range query plot
-fenwick_tree,point_update,2000,0.002442,1500,milliseconds also stored in the range query plot
-segment_tree,build,8000,0.001697,1,milliseconds also stored in the range query plot
-segment_tree,range_query,8000,0.006672,1500,milliseconds also stored in the range query plot
-segment_tree,point_update,8000,0.003611,1500,milliseconds also stored in the range query plot
-fenwick_tree,build,8000,0.000969,1,milliseconds also stored in the range query plot
-fenwick_tree,range_query,8000,0.001772,1500,milliseconds also stored in the range query plot
-fenwick_tree,point_update,8000,0.003299,1500,milliseconds also stored in the range query plot
-segment_tree,build,20000,0.004249,1,milliseconds also stored in the range query plot
-segment_tree,range_query,20000,0.007347,1500,milliseconds also stored in the range query plot
-segment_tree,point_update,20000,0.004303,1500,milliseconds also stored in the range query plot
-fenwick_tree,build,20000,0.002431,1,milliseconds also stored in the range query plot
-fenwick_tree,range_query,20000,0.001855,1500,milliseconds also stored in the range query plot
-fenwick_tree,point_update,20000,0.003358,1500,milliseconds also stored in the range query plot
-persistent_segment_tree,point_update_new_version,4000,0.000191,25,cumulative time to create this many versions
-full_array_copy,point_update_new_version,4000,0.000117,25,cumulative time to copy the whole list after each update
-rebuilt_segment_tree,point_update_new_version,4000,0.115494,25,cumulative time to build a fresh persistent tree after each update
-persistent_segment_tree,point_update_new_version,4000,0.000330,50,cumulative time to create this many versions
-full_array_copy,point_update_new_version,4000,0.000219,50,cumulative time to copy the whole list after each update
-rebuilt_segment_tree,point_update_new_version,4000,0.199427,50,cumulative time to build a fresh persistent tree after each update
-persistent_segment_tree,point_update_new_version,4000,0.000655,100,cumulative time to create this many versions
-full_array_copy,point_update_new_version,4000,0.000417,100,cumulative time to copy the whole list after each update
-rebuilt_segment_tree,point_update_new_version,4000,0.369504,100,cumulative time to build a fresh persistent tree after each update
-persistent_segment_tree,point_update_new_version,4000,0.001647,200,cumulative time to create this many versions
-full_array_copy,point_update_new_version,4000,0.000794,200,cumulative time to copy the whole list after each update
-rebuilt_segment_tree,point_update_new_version,4000,0.715592,200,cumulative time to build a fresh persistent tree after each update
-succinct_bitvector,rank1,20000,0.001188,2000,
-succinct_bitvector,select1,20000,0.009047,2000,
-succinct_bitvector,rank1,80000,0.001127,2000,
-succinct_bitvector,select1,80000,0.010611,2000,
-succinct_bitvector,rank1,200000,0.001351,2000,
-succinct_bitvector,select1,200000,0.015019,2000,
-wavelet_tree,range_count,2000,0.002383,800,DNA alphabet
-wavelet_tree,range_quantile,2000,0.004113,800,DNA alphabet
-wavelet_tree,range_count,8000,0.002457,800,DNA alphabet
-wavelet_tree,range_quantile,8000,0.004356,800,DNA alphabet
-wavelet_tree,range_count,20000,0.002427,800,DNA alphabet
-wavelet_tree,range_quantile,20000,0.004399,800,DNA alphabet
-transpose_naive,transpose,48,0.000271,1,
-transpose_cache_oblivious,transpose,48,0.000383,1,leaf 64
-transpose_naive,transpose,96,0.000985,1,
-transpose_cache_oblivious,transpose,96,0.001407,1,leaf 64
-transpose_naive,transpose,144,0.002313,1,
-transpose_cache_oblivious,transpose,144,0.002872,1,leaf 64
-multiply_naive,multiply,24,0.002325,1,i j k loops
-multiply_cache_oblivious,multiply,24,0.002922,1,leaf 256
-multiply_naive,multiply,36,0.008349,1,i j k loops
-multiply_cache_oblivious,multiply,36,0.010626,1,leaf 256
-multiply_naive,multiply,48,0.019074,1,i j k loops
-multiply_cache_oblivious,multiply,48,0.024297,1,leaf 256
+segment_tree,build,2000,0.000417,1,milliseconds also stored in the range query plot
+segment_tree,range_query,2000,0.005210,1500,milliseconds also stored in the range query plot
+segment_tree,point_update,2000,0.002494,1500,milliseconds also stored in the range query plot
+fenwick_tree,build,2000,0.000259,1,milliseconds also stored in the range query plot
+fenwick_tree,range_query,2000,0.001870,1500,milliseconds also stored in the range query plot
+fenwick_tree,point_update,2000,0.002582,1500,milliseconds also stored in the range query plot
+segment_tree,build,8000,0.001557,1,milliseconds also stored in the range query plot
+segment_tree,range_query,8000,0.006246,1500,milliseconds also stored in the range query plot
+segment_tree,point_update,8000,0.002978,1500,milliseconds also stored in the range query plot
+fenwick_tree,build,8000,0.000965,1,milliseconds also stored in the range query plot
+fenwick_tree,range_query,8000,0.001701,1500,milliseconds also stored in the range query plot
+fenwick_tree,point_update,8000,0.002704,1500,milliseconds also stored in the range query plot
+segment_tree,build,20000,0.003988,1,milliseconds also stored in the range query plot
+segment_tree,range_query,20000,0.007202,1500,milliseconds also stored in the range query plot
+segment_tree,point_update,20000,0.004234,1500,milliseconds also stored in the range query plot
+fenwick_tree,build,20000,0.002496,1,milliseconds also stored in the range query plot
+fenwick_tree,range_query,20000,0.001918,1500,milliseconds also stored in the range query plot
+fenwick_tree,point_update,20000,0.003039,1500,milliseconds also stored in the range query plot
+persistent_segment_tree,point_update_new_version,4000,0.000159,25,cumulative time to create this many versions
+full_array_copy,point_update_new_version,4000,0.000121,25,cumulative time to copy the whole list after each update
+rebuilt_segment_tree,point_update_new_version,4000,0.162941,25,cumulative time to build a fresh persistent tree after each update
+persistent_segment_tree,point_update_new_version,4000,0.000275,50,cumulative time to create this many versions
+full_array_copy,point_update_new_version,4000,0.000223,50,cumulative time to copy the whole list after each update
+rebuilt_segment_tree,point_update_new_version,4000,0.208708,50,cumulative time to build a fresh persistent tree after each update
+persistent_segment_tree,point_update_new_version,4000,0.000510,100,cumulative time to create this many versions
+full_array_copy,point_update_new_version,4000,0.000420,100,cumulative time to copy the whole list after each update
+rebuilt_segment_tree,point_update_new_version,4000,0.326100,100,cumulative time to build a fresh persistent tree after each update
+persistent_segment_tree,point_update_new_version,4000,0.001010,200,cumulative time to create this many versions
+full_array_copy,point_update_new_version,4000,0.000811,200,cumulative time to copy the whole list after each update
+rebuilt_segment_tree,point_update_new_version,4000,0.562118,200,cumulative time to build a fresh persistent tree after each update
+succinct_bitvector,rank1,20000,0.000989,2000,
+succinct_bitvector,select1,20000,0.006978,2000,
+succinct_bitvector,rank1,80000,0.001086,2000,
+succinct_bitvector,select1,80000,0.008946,2000,
+succinct_bitvector,rank1,200000,0.001086,2000,
+succinct_bitvector,select1,200000,0.009968,2000,
+wavelet_tree,range_count,2000,0.002281,800,DNA alphabet
+wavelet_tree,range_quantile,2000,0.003768,800,DNA alphabet
+wavelet_tree,range_count,8000,0.002317,800,DNA alphabet
+wavelet_tree,range_quantile,8000,0.004653,800,DNA alphabet
+wavelet_tree,range_count,20000,0.003447,800,DNA alphabet
+wavelet_tree,range_quantile,20000,0.003993,800,DNA alphabet
+transpose_naive,transpose,48,0.000203,1,
+transpose_cache_oblivious,transpose,48,0.000283,1,leaf 64
+transpose_naive,transpose,96,0.000742,1,
+transpose_cache_oblivious,transpose,96,0.001165,1,leaf 64
+transpose_naive,transpose,144,0.002421,1,
+transpose_cache_oblivious,transpose,144,0.003668,1,leaf 64
+multiply_naive,multiply,24,0.002531,1,i j k loops
+multiply_cache_oblivious,multiply,24,0.004290,1,leaf 256
+multiply_naive,multiply,36,0.007908,1,i j k loops
+multiply_cache_oblivious,multiply,36,0.011880,1,leaf 256
+multiply_naive,multiply,48,0.019317,1,i j k loops
+multiply_cache_oblivious,multiply,48,0.025596,1,leaf 256

@@ -1,20 +1,20 @@
 structure,n,bytes,notes
-segment_tree,2000,104769,Python object size after the timed updates
+segment_tree,2000,104777,Python object size after the timed updates
 fenwick_tree,2000,31755,Python object size after the timed updates
-segment_tree,8000,393509,Python object size after the timed updates
+segment_tree,8000,393517,Python object size after the timed updates
 fenwick_tree,8000,104919,Python object size after the timed updates
-segment_tree,20000,973237,Python object size after the timed updates
+segment_tree,20000,973245,Python object size after the timed updates
 fenwick_tree,20000,248203,Python object size after the timed updates
-persistent_segment_tree,4000,505941,"25 versions, 8324 unique nodes, 207974 nodes if each version were private"
-persistent_segment_tree,4000,540213,"50 versions, 8647 unique nodes, 407949 nodes if each version were private"
-persistent_segment_tree,4000,608953,"100 versions, 9297 unique nodes, 807899 nodes if each version were private"
-persistent_segment_tree,4000,746209,"200 versions, 10593 unique nodes, 1607799 nodes if each version were private"
+persistent_segment_tree,4000,506149,"25 versions, 8324 unique nodes, 207974 nodes if each version were private"
+persistent_segment_tree,4000,540621,"50 versions, 8647 unique nodes, 407949 nodes if each version were private"
+persistent_segment_tree,4000,609761,"100 versions, 9297 unique nodes, 807899 nodes if each version were private"
+persistent_segment_tree,4000,747817,"200 versions, 10593 unique nodes, 1607799 nodes if each version were private"
 succinct_bitvector,20000,9843,"directories 5776 bytes, data words separate"
 succinct_bitvector,80000,34519,"directories 22504 bytes, data words separate"
 succinct_bitvector,200000,84863,"directories 55264 bytes, data words separate"
-dna_index,2000,27661,wavelet plus the original Python string
-dna_index,8000,86381,wavelet plus the original Python string
-dna_index,20000,203809,wavelet plus the original Python string
+dna_index,2000,27693,wavelet plus the original Python string
+dna_index,8000,86413,wavelet plus the original Python string
+dna_index,20000,203841,wavelet plus the original Python string
 matrix_pair,48,36864,"two float64 matrices, input plus transpose"
 matrix_pair,96,147456,"two float64 matrices, input plus transpose"
 matrix_pair,144,331776,"two float64 matrices, input plus transpose"
