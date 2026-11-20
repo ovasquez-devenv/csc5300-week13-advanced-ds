@@ -1,4 +1,4 @@
 structure,n,raw_bits,stored_bits,bit_ratio,python_bytes,notes
-wavelet_tree_dna,2000,16000,4000,4.000,27661,raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors
-wavelet_tree_dna,8000,64000,16000,4.000,86381,raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors
-wavelet_tree_dna,20000,160000,40000,4.000,203809,raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors
+wavelet_tree_dna,2000,16000,4000,4.000,27693,raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors
+wavelet_tree_dna,8000,64000,16000,4.000,86413,raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors
+wavelet_tree_dna,20000,160000,40000,4.000,203841,raw_bits counts 8 bits per ASCII base; stored_bits is the sum of node bit vectors

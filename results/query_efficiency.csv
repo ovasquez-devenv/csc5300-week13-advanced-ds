@@ -1,20 +1,20 @@
 structure,operation,n,us_per_op,baseline,baseline_us_per_op,speedup,notes
-fenwick_tree,range_query,2000,1.046,segment_tree,3.420,3.269,speedup is segment time divided by Fenwick time
-fenwick_tree,range_query,8000,1.181,segment_tree,4.448,3.765,speedup is segment time divided by Fenwick time
-fenwick_tree,range_query,20000,1.237,segment_tree,4.898,3.960,speedup is segment time divided by Fenwick time
-persistent_segment_tree,versioned_update,4000,7.632,rebuilt_segment_tree,4619.746,605.341,node sharing 8324/207974 after 25 versions; list copy us/op 4.700
-persistent_segment_tree,versioned_update,4000,6.606,rebuilt_segment_tree,3988.531,603.779,node sharing 8647/407949 after 50 versions; list copy us/op 4.379
-persistent_segment_tree,versioned_update,4000,6.551,rebuilt_segment_tree,3695.038,564.007,node sharing 9297/807899 after 100 versions; list copy us/op 4.166
-persistent_segment_tree,versioned_update,4000,8.236,rebuilt_segment_tree,3577.962,434.416,node sharing 10593/1607799 after 200 versions; list copy us/op 3.970
-succinct_bitvector,rank1,20000,0.594,linear_scan,47.123,79.361,select1 4.523 us vs scan 442.817 us
-succinct_bitvector,rank1,80000,0.564,linear_scan,156.373,277.408,select1 5.306 us vs scan 1636.508 us
-succinct_bitvector,rank1,200000,0.676,linear_scan,518.715,767.810,select1 7.510 us vs scan 3342.900 us
-wavelet_tree,range_count,2000,2.978,str.count,1.536,0.516,bit compression ratio 4.000 (ASCII bits / wavelet bits)
-wavelet_tree,range_count,8000,3.071,str.count,5.916,1.926,bit compression ratio 4.000 (ASCII bits / wavelet bits)
-wavelet_tree,range_count,20000,3.034,str.count,13.570,4.473,bit compression ratio 4.000 (ASCII bits / wavelet bits)
-multiply_cache_oblivious,multiply,24,2921.558,multiply_naive,2325.144,0.796,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
-multiply_cache_oblivious,multiply,36,10625.662,multiply_naive,8348.844,0.786,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
-multiply_cache_oblivious,multiply,48,24297.175,multiply_naive,19073.684,0.785,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
+fenwick_tree,range_query,2000,1.246,segment_tree,3.473,2.787,speedup is segment time divided by Fenwick time
+fenwick_tree,range_query,8000,1.134,segment_tree,4.164,3.672,speedup is segment time divided by Fenwick time
+fenwick_tree,range_query,20000,1.279,segment_tree,4.801,3.755,speedup is segment time divided by Fenwick time
+persistent_segment_tree,versioned_update,4000,6.348,rebuilt_segment_tree,6517.620,1026.720,node sharing 8324/207974 after 25 versions; list copy us/op 4.832
+persistent_segment_tree,versioned_update,4000,5.506,rebuilt_segment_tree,4174.158,758.111,node sharing 8647/407949 after 50 versions; list copy us/op 4.460
+persistent_segment_tree,versioned_update,4000,5.096,rebuilt_segment_tree,3260.995,639.913,node sharing 9297/807899 after 100 versions; list copy us/op 4.205
+persistent_segment_tree,versioned_update,4000,5.052,rebuilt_segment_tree,2810.588,556.387,node sharing 10593/1607799 after 200 versions; list copy us/op 4.056
+succinct_bitvector,rank1,20000,0.495,linear_scan,39.037,78.919,select1 3.489 us vs scan 336.835 us
+succinct_bitvector,rank1,80000,0.543,linear_scan,143.770,264.721,select1 4.473 us vs scan 1228.085 us
+succinct_bitvector,rank1,200000,0.543,linear_scan,448.635,825.911,select1 4.984 us vs scan 3111.494 us
+wavelet_tree,range_count,2000,2.851,str.count,1.113,0.390,bit compression ratio 4.000 (ASCII bits / wavelet bits)
+wavelet_tree,range_count,8000,2.896,str.count,2.325,0.803,bit compression ratio 4.000 (ASCII bits / wavelet bits)
+wavelet_tree,range_count,20000,4.309,str.count,3.855,0.895,bit compression ratio 4.000 (ASCII bits / wavelet bits)
+multiply_cache_oblivious,multiply,24,4290.000,multiply_naive,2531.300,0.590,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
+multiply_cache_oblivious,multiply,36,11879.500,multiply_naive,7908.400,0.666,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
+multiply_cache_oblivious,multiply,48,25595.900,multiply_naive,19317.000,0.755,"wall clock, one multiply; speedup above 1 means the recursive code was faster"
 transpose_naive,simulated_cache_misses,64,4608,see notes,,,us_per_op column holds miss count; transpose line 8 x 16 lines; multiply line 8 x 8 lines
 transpose_co,simulated_cache_misses,64,1024,see notes,,,us_per_op column holds miss count; transpose line 8 x 16 lines; multiply line 8 x 8 lines
 multiply_naive,simulated_cache_misses,24,15624,see notes,,,us_per_op column holds miss count; transpose line 8 x 16 lines; multiply line 8 x 8 lines

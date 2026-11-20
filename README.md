@@ -61,4 +61,4 @@ The full run uses modest sizes (arrays up to 20,000, bit vectors up to 200,000, 
 - `results/summary.json`
 - PNG plots for range queries, persistent versions, bit vectors, wavelet compression, matrix times, van Emde Boas misses, and memory
 
-The writeup in `docs/chapter12_report.md` uses one run of that command. Clock times will differ if you run it again.
+The files already in `results/`, and the numbers in `docs/chapter12_report.md`, are one run of that command on an AMD Ryzen AI 7 445 (12 logical cores, 15 GB of memory, Windows 11, Python 3.14.7). Clock times will differ if you run it again.
