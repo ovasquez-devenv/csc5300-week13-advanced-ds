@@ -4,7 +4,7 @@ I built a Python library for Chapter 12 of Amakobe, Advanced Computational Algor
 
 # Overview of advanced data structures
 
-Amakobe starts from jobs arrays and hash tables do badly: a changing range aggregate, an old version, a long bit string, and a walk that misses the cache. Chapter 12 pairs those with a segment tree, a Fenwick tree (also a binary indexed tree), path copying, a succinct bit vector, a wavelet tree, and cache oblivious divide and conquer. I kept those shapes. The segment tree is a flat array of about 4n slots, the Fenwick tree steps by lowbit (`i & -i`), persistent nodes are never rewritten, and the bit vector is the two level directory in section 12.5.2 plus a lookup table. I did not use another textbook.
+A plain array or hash table does badly at a changing range aggregate, an old version, a long bit string, and a cache miss. I kept Amakobe's shapes: a segment tree of about 4n slots, a Fenwick tree (also a binary indexed tree) stepping by lowbit (`i & -i`), plus path copying, a succinct bit vector, a wavelet tree, and cache oblivious divide and conquer. I did not use another textbook.
 
 # Tree-based range queries
 
@@ -30,7 +30,7 @@ Section 12.5.2 wants constant time rank. Bits sit in 64 bit words. A superblock 
 
 On 200,000 bits, rank averaged 0.54 microseconds against 448.64 for a list scan, about 826 times, and select1 averaged 4.98 against 3,111.49. Shorter vectors stayed in the same shape: rank near 0.49 to 0.54 microseconds, scans from 39.04 up, select1 from 3.49 to 4.98. The object was 84,863 bytes, with 55,264 in the directories, because each block rank is a full 32 bit integer.
 
-A wavelet tree (section 12.5.3) stores each alphabet split in a bit vector, so access, rank, select, a range count, and the k th symbol in a window are O(log sigma). DNA is A, C, G, T, two bits per base, ratio 4.00 against 8 bit characters: 40,000 stored bits on 20,000 bases. The clock did not follow that ratio. A string count is a C loop, and it beat the tree at every length: 1.11 microseconds against 2.85 at 2,000 bases, and 3.86 against 4.31 at 20,000. The gap narrows, and the tree never passes. The index object was 203,841 bytes.
+A wavelet tree (section 12.5.3) stores each alphabet split in a bit vector, so access, rank, select, a range count, and the k th symbol in a window are O(log sigma). DNA is A, C, G, T, two bits per base, ratio 4.00 against 8 bit characters: 40,000 stored bits on 20,000 bases. A string count is a C loop, and it beat the tree at every length: 1.11 microseconds against 2.85 at 2,000 bases, and 3.86 against 4.31 at 20,000. The gap narrows, and the tree never passes. The index object was 203,841 bytes.
 
 ![Bit vector queries](../results/bitvector_queries.png)
 
@@ -60,15 +60,15 @@ The DNA index in section 12.5.4 counts a base with a range count and picks the k
 
 ## Methodology
 
-I ran this on my PC: an AMD Ryzen AI 7 445 with 12 logical cores and 15 GB of memory, Windows 11, Python 3.14.7. NumPy held the matrices and Matplotlib drew the plots. Seed 5300 fixes the inputs, so the same script on another machine changes the clock and not the shape of the experiment. I timed each batch and divided by the count, and memory charges each live object once so shared nodes are not billed twice. Miss counts come from that small cache, not from hardware. Lengths stay modest. Plots and comma separated value (CSV) tables from this run are in `results/`.
+I ran this on my PC: an AMD Ryzen AI 7 445 with 12 logical cores and 15 GB of memory, Windows 11, Python 3.14.7. NumPy held the matrices and Matplotlib drew the plots. Seed 5300 fixes the inputs. I timed each batch and divided by the count, and memory charges each live object once so shared nodes are not billed twice. Miss counts come from that small cache, not from hardware. Lengths stay modest. Plots and comma separated value (CSV) tables from this run are in `results/`.
 
 ## Results
 
-The charts are this same run. At length 20,000 the Fenwick query was 3.75 times the segment query and about a quarter of the bytes, while updates stayed close. Path copying 200 versions took 1.01 ms against 562.12 ms to rebuild each tree. The string count stayed ahead of the wavelet tree. Recursive transpose misses were 1,024 against 4,608, and the van Emde Boas search on 16,383 nodes missed 1,400 times where the heap missed 2,400.
+The charts are this same run, and they show the same gaps: 3.75 times on the length 20,000 query, 1.01 ms against 562.12 ms for path copying, and 1,400 misses against 2,400 on 16,383 nodes.
 
 # Discussion
 
-Amakobe counts traffic and nodes. In CPython a call and an object header often dominate, so the Fenwick query wins by a modest factor even though both are O(log n), and the updates barely separate. A list copy beats path copying on the clock and loses on nodes. A string count beats the wavelet tree at every length I measured, because that count is a C loop, while the bit ratio of 4 is still real. The recursive product cuts misses from 15,624 to 6,528 and still takes 25.60 ms against 19.32 ms. That measures the interpreter, not a failure of section 12.6. My block ranks are full 32 bit integers, which is why the directory outweighs the bits.
+Amakobe counts traffic and nodes. In CPython a call and an object header often dominate, so the Fenwick query wins by a modest factor even though both are O(log n), and the updates barely separate. The recursive product cuts misses from 15,624 to 6,528 and still takes 25.60 ms against 19.32 ms. That measures the interpreter, not a failure of section 12.6. My block ranks are full 32 bit integers, which is why the directory outweighs the bits.
 
 # Conclusion
 
@@ -76,4 +76,4 @@ The library does the chapter's jobs: range sum, min, and max with a lazy range a
 
 # Final remarks
 
-Tests check each structure against a direct loop on random inputs, including the sum from index 1 through 4 on 1, 3, 5, 7, 9, 11. The scripts under `examples/` make those calls without the assertions. Where Python misses the chapter's space bound, the tables show the bytes I measured on this machine.
+Tests check each structure against a direct loop on random inputs, including the sum from index 1 through 4 on 1, 3, 5, 7, 9, 11. Scripts under `examples/` skip the assertions. The tables show the bytes I measured where Python misses the chapter's space bound.
